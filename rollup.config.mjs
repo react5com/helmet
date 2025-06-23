@@ -21,29 +21,17 @@ export default [
   {
     input: "./src/index.tsx",
     output: [
-      {
-        file: pkg.main,
-        format: "cjs",
-        exports: "named",
-        sourcemap: !production,
-      },
+      // {
+      //   file: pkg.main,
+      //   format: "cjs",
+      //   exports: "named",
+      //   sourcemap: !production,
+      // },
       {
         file: pkg.module,
         format: "es",
         exports: "named",
         sourcemap: !production,
-      },
-      {
-        name: "helmet-head",
-        file: pkg.browser,
-        format: "umd",
-        exports: "named",
-        sourcemap: !production,
-        globals: {
-          "react-router": "reactRouter",
-          "react/jsx-runtime": "jsxRuntime",
-          "react-helmet-async": "reactHelmetAsync"
-        }
       },
     ],
     external,
